@@ -1,41 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context=".MainActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark" />
 
     <EditText
             android:id="@+id/edtDistance"
+            style="@style/mCustomEditText"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/distancia"/>
+
+    <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/distancia" />
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="Total de Kilometros"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="12sp"/>
 
     <EditText
             android:id="@+id/edtPrice"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/mCustomEditText"
+            android:hint="@string/preco"/>
+
+    <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/preco" />
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="Preço por Litro"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="12sp"/>
 
     <EditText
             android:id="@+id/edtAutonomy"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/mCustomEditText"
+            android:hint="@string/autonomia"/>
+
+    <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/autonomia" />
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="Preço por Litro"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="12sp"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Seu gasto total será de:"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="15sp"/>
 
     <TextView
             android:id="@+id/txtResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="R$ 0,00" />
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/colorPriceText"
+            android:text="R$ 0,00"/>
 
     <Button
             android:id="@+id/btnCalculate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/calcular" />
+            android:layout_margin="15dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:text="@string/calcular"
+            android:background="@drawable/round_bt"/>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
